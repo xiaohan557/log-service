@@ -1,5 +1,6 @@
 package com.example.logservice.cli;
 
+import com.example.logservice.agent.Agent;
 import com.example.logservice.model.LogEntry;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -34,6 +35,7 @@ public class CliApp {
                 case "report"  -> report(rest);
                 case "query"   -> query(rest);
                 case "storage" -> storage(rest);
+                case "agent"   -> Agent.run(rest);
                 default        -> printUsage();
             }
         } catch (Exception e) {
@@ -150,6 +152,7 @@ public class CliApp {
                   report   上报测试日志    --server URL --count N --level X --tag T --source S --message M
                   query    查询日志        --server URL --level X --tag T --keyword K --start TS --end TS --limit N
                   storage  查看存储状态    --server URL
+                  agent    启动采集 Agent  --mode push|pull --server URL --file F --interval MS --level X --tag T
                 """);
     }
 }
