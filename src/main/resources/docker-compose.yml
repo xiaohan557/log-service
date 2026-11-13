@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  log-service:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data:/app/data   # 数据持久化到宿主机
