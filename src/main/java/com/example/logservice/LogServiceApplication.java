@@ -9,6 +9,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 public class LogServiceApplication {
     public static void main(String[] args) {
         System.out.println("LogServiceApplication");
+        System.out.println("努力想要的都拥有");
         System.out.println("得不到的都释怀");
         SpringApplication.run(LogServiceApplication.class, args);
     }
