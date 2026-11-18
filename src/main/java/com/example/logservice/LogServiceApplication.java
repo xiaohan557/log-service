@@ -8,8 +8,6 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableScheduling
 public class LogServiceApplication {
     public static void main(String[] args) {
-        System.out.println("LogServiceApplication");
-        System.out.println("得不到的都释怀");
         SpringApplication.run(LogServiceApplication.class, args);
     }
 }
